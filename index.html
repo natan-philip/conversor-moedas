@@ -11,48 +11,58 @@
 </head>
 <body>
     <main class="flex">
-        <section class="container flex">
-            <div class="titulo flex">
-                <span>💱</span>
-                <div class="logo">
-                    <h1>Dev Currency</h1>
-                    <p>Conversor de moedas</p>
-                </div>
-            </div>
-            <div class="border">
-                <div class="container-converte">
-                    <div class="converte-top flex">
-                        <div class="seletores-moedas flex">
-                            <div class="moedas-icon"><img src="https://flagcdn.com/br.svg" width="30" alt="Brasil">BRL</div>
-                            <div class="moedas flex">
-                                <div class="dropdown-arrow"><img src="img/down.png" alt="abrir seleção de moedas"/></div>
-                            </div>
-                        </div>
-                        <input type="text" class="input-converte" placeholder="0,00"/>
+        <section class="flex">
+            <div class="container flex">
+                <div class="titulo flex">
+                    <span>💱</span>
+                    <div class="logo">
+                        <h1>Dev Currency</h1>
+                        <p>Conversor de moedas</p>
                     </div>
                 </div>
-            </div>
-            <div class="divisor flex">
-                <div class="btn-converter flex">
-                    <img src="./img/arrows.png" alt="botao inverter selecao de moedas">
-                </div>
-            </div>
-            <div class="border">
-                <div class="container-converte">
-                    <div class="converte-top flex">
-                        <div class="seletores-moedas flex">
-                            <div class="moedas-icon"><img src="https://flagcdn.com/us.svg" width="30" alt="Stados Unidos">USD</div>
-                            <div class="moedas flex">
-                                <div class="dropdown-arrow"><img src="img/down.png" alt="abrir seleção de moedas"/></div>
+                <div class="border">
+                    <div class="container-converte">
+                        <div class="converte-top flex">
+                            <div class="seletores-moedas flex">
+                                <div class="moedas-icon"><img src="https://flagcdn.com/br.svg" width="30" alt="Brasil">BRL</div>
+                                <div class="moedas flex">
+                                    <div class="dropdown-arrow"><img src="img/down.png" alt="abrir seleção de moedas"/></div>
+                                </div>
                             </div>
+                            <input type="text" class="input-converte" placeholder="0,00"/>
                         </div>
-                        <input type="text" class="input-converte" placeholder="0,00"/>
                     </div>
                 </div>
+                <div class="divisor flex">
+                    <div class="btn-converter flex">
+                        <img src="./img/arrows.png" alt="botao inverter selecao de moedas">
+                    </div>
+                </div>
+                <div class="border">
+                    <div class="container-converte">
+                        <div class="converte-top flex">
+                            <div class="seletores-moedas flex">
+                                <div class="moedas-icon"><img src="https://flagcdn.com/us.svg" width="30" alt="Stados Unidos">USD</div>
+                                <div class="moedas flex">
+                                    <div class="dropdown-arrow"><img src="img/down.png" alt="abrir seleção de moedas"/></div>
+                                </div>
+                            </div>
+                            <input type="text" class="input-converte" placeholder="0,00"/>
+                        </div>
+                    </div>
+                </div>
+                <button>Converter</button>
             </div>
-            <button>Converter</button>
         </section>
-
+        <section class="flex">
+            <div class="container-grafico">
+                <div class="grafico-atual">
+                    <h2 class="referencia">Últimos 7 dias</h2>
+                    <p class="moedas-grafico">BRL / EUR</p>
+                    <canvas id="grafico"></canvas>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>

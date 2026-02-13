@@ -25,10 +25,10 @@ Cores associadas a **finanças, estabilidade e clareza**, com alto contraste e p
 
 ### Paleta Sugerida
 
-* **Primária:** Azul médio (#1E6F9F)
+* **Primária:** Verde suave (#51DE88)
 
   * Representa confiança e tecnologia
-* **Secundária:** Verde suave (##51DE88)
+* **Secundária:** Verde escuro (##2FA84F)
 
   * Associado a dinheiro e confirmação
 * **Neutros:**
