@@ -290,3 +290,24 @@ button:hover {
     border-radius: 15px;
     color: var(--bg-cinza-escuro);
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px;
+        height: auto;
+        min-height: 100dvh;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .glass:nth-child(1),
+    .glass:nth-child(2) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+    .cards-container {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
