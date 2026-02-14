@@ -35,7 +35,7 @@ Cores associadas a **finanças, estabilidade e clareza**, com alto contraste e p
 
   * Branco (#FFFFFF) — fundo principal
   * Cinza claro (#F4F6F8) — cards e inputs
-  * Cinza médio (#9AA3AB) — textos secundários
+  * Cinza médio (#7c7d7e) — textos secundários
   * Cinza escuro (#2B2F33) — textos principais
 * **Feedback:**
 

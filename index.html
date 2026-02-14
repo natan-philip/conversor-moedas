@@ -10,8 +10,8 @@
     <title>Dev Currency | Conversor de Moedas</title>
 </head>
 <body>
-    <main class="flex">
-        <section class="flex">
+    <main class="grid flex">
+        <section class="glass flex">
             <div class="container flex">
                 <div class="titulo flex">
                     <span>💱</span>
@@ -54,12 +54,52 @@
                 <button>Converter</button>
             </div>
         </section>
-        <section class="flex">
+        <section class="glass flex">
             <div class="container-grafico">
-                <div class="grafico-atual">
+                <div class="grafico-header">
                     <h2 class="referencia">Últimos 7 dias</h2>
                     <p class="moedas-grafico">BRL / EUR</p>
+                </div>
+                <div class="conteudo-grafico">
                     <canvas id="grafico"></canvas>
+                </div>
+            </div>
+        </section>
+        <section class="cards-container flex">
+            <div class="card flex">
+                <div class="card-titulo flex">
+                    <img src="https://flagcdn.com/br.svg" width="30" alt="Brasil"> <span>BRL / EUR</span>
+                </div>
+                <div class="card-content flex">
+                    <h3>0.92</h3>
+                    <p>+0.1%</p>
+                </div>
+            </div>
+            <div class="card flex">
+                <div class="card-titulo flex">
+                    <img src="https://flagcdn.com/us.svg" width="30" alt="Stados Unidos"> <span>USD / EUR</span>
+                </div>
+                <div class="card-content flex">
+                    <h3>0.92</h3>
+                    <p>+0.05%</p>
+                </div>
+            </div>
+            <div class="card flex">
+                <div class="card-titulo flex">
+                    <img src="https://flagcdn.com/us.svg" width="30" alt="Stados Unidos"> <span>USD / BRL</span>
+                </div>
+                <div class="card-content flex">
+                    <h3>0.52</h3>
+                    <p>+0.3%</p>
+                </div>
+            </div>
+            <div class="card flex">
+                <div class="card-titulo flex">
+                    <img src="https://flagcdn.com/br.svg" width="30" alt="Brasil"> <span>BRL / EUR</span>
+                </div>
+                <div class="card-content flex">
+                    <h3>0.92</h3>
+                    <p>+0.1%</p>
                 </div>
             </div>
         </section>
