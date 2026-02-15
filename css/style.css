@@ -123,25 +123,81 @@ main {
 }
 
 .seletores-moedas {
-    flex-direction: row;
-    justify-content: space-between;
+    position: relative;
     align-items: center;
     width: 120px;
-    gap: 5px;
-    background-color: var(--bg-neutro-01);
     border-radius: 8px;
-    padding: 3px;
+    min-width: 200px;
+    gap: 4px;
 }
-.moedas-icon {
-    display: flex;
-    font-size: 1rem;
+
+label {
     font-weight: 600;
-    gap: 5px;
+    color: var(--bg-cinza);
 }
-.seletores-moedas, .moedas, .moedas-icon {
-    flex-direction: row;
-    justify-content: center;
+
+.btn-moeda {
+    background-color: var(--bg-neutro-02);
+    border: 1px solid var(--bg-card);
+    color: var(--bg-cinza-escuro);
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    justify-content: space-between;
     align-items: center;
+    min-width: 120px;
+}
+
+.btn-moeda:hover {
+      border-color: var(--bg-btn);
+}
+
+.dropdown-arrow {
+    width: 20px;
+    height: 20px;
+}
+
+.menu-moedas {
+    position: absolute;
+    top: 45px;
+    list-style: none;
+    margin-top: 5px;
+    background-color: var(--bg-neutro-01);
+    border: 1px solid var(--bg-card);
+    border-radius: 10px;
+    width: 220px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+}
+
+.menu-moedas li {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--bg-cinza-escuro);
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-moedas li:hover {
+    background-color: var(--bg-card);
+}
+
+.selecionado {
+    background-color: var(--bg-card);
+    font-weight: 700;
+}
+
+.codigo {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--bg-cinza-escuro);
+}
+
+.escondido {
+    display: none;
 }
 
 .input-converte {
@@ -177,7 +233,7 @@ main {
     z-index: 1;
 }
 
-.btn-converter {
+.btn-inverter {
     position: relative;
     flex-direction: row;
     justify-content: center;
@@ -192,7 +248,7 @@ main {
     transform: rotate(90deg);
 }
 
-button {
+.converter {
     background-color: var(--bg-principal);
     color: var(--bg-cinza-escuro);
     border: none;
@@ -204,7 +260,7 @@ button {
     transition: all 0.3s ease;
 }
 
-button:hover {
+.converter:hover {
     filter: brightness(0.9);
     transform: translateY(-5px);
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
@@ -293,7 +349,7 @@ button:hover {
 
 @media screen and (max-width: 768px) {
     body {
-        padding: 15px;
+        padding-left: 15px;
         height: auto;
         min-height: 100dvh;
     }

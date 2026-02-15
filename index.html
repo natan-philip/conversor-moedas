@@ -24,17 +24,47 @@
                     <div class="container-converte">
                         <div class="converte-top flex">
                             <div class="seletores-moedas flex">
-                                <div class="moedas-icon"><img src="https://flagcdn.com/br.svg" width="30" alt="Brasil">BRL</div>
-                                <div class="moedas flex">
-                                    <div class="dropdown-arrow"><img src="img/down.png" alt="abrir seleção de moedas"/></div>
-                                </div>
+                                <label>De</label>
+                                <button class="btn-moeda flex" data-dropdown="de">
+                                    <img src="img/brl.png" class="bandeira"></img>
+                                    <span class="codigo">BRL</span>
+                                    <span><img src="img/down.png" class="dropdown-arrow" alt="abrir seleção de moedas"/></span>
+                                </button>
+                                <ul class="menu-moedas escondido" data-menu="de">
+                                    <li data-moeda="BRL" data-bandeira="./img/brl.png" class="selecionado">
+                                        <img src="./img/brl.png" class="bandeira" alt="Brasil">Real BRL</li>
+                                    <li data-moeda="USD" data-bandeira="./img/usd.png">
+                                        <img src="./img/usd.png" class="bandeira" alt="Estados Unidos">Dólar Americano USD
+                                    </li>
+                                    <li data-moeda="USD" data-bandeira="./img/usd.png">
+                                        <img src="./img/eur.png" class="bandeira" alt="União Europeia">Euro EUR
+                                    </li>
+                                    <li data-moeda="USD" data-bandeira="./img/jpy.png">
+                                        <img src="./img/jpy.png" class="bandeira" alt="Japão">Iene Japonês JPY
+                                    </li>
+                                    <li data-moeda="USD" data-bandeira="./img/gbp.png">
+                                        <img src="./img/gbp.png" class="bandeira" alt="Reino Unido">Libra Esterlina GBP
+                                    </li>
+                                    <li data-moeda="USD" data-bandeira="./img/aud.png">
+                                        <img src="./img/aud.png" class="bandeira" alt="Austrália">Dólar Australiano AUD
+                                    </li>
+                                    <li data-moeda="USD" data-bandeira="./img/chf.png">
+                                        <img src="./img/chf.png" class="bandeira" alt="Suiça">Franco Suíço CHF
+                                    </li>
+                                    <li data-moeda="USD" data-bandeira="./img/cad.png">
+                                        <img src="./img/cad.png" class="bandeira" alt="Canadá">Dólar Canadense CAD
+                                    </li>
+                                    <li data-moeda="USD" data-bandeira="./img/cny.png">
+                                        <img src="./img/cny.png" class="bandeira" alt="China">Yuan Chinês CNY
+                                    </li>
+                                </ul>
                             </div>
                             <input type="text" class="input-converte" placeholder="0,00"/>
                         </div>
                     </div>
                 </div>
                 <div class="divisor flex">
-                    <div class="btn-converter flex">
+                    <div class="btn-inverter flex">
                         <img src="./img/arrows.png" alt="botao inverter selecao de moedas">
                     </div>
                 </div>
@@ -42,16 +72,46 @@
                     <div class="container-converte">
                         <div class="converte-top flex">
                             <div class="seletores-moedas flex">
-                                <div class="moedas-icon"><img src="https://flagcdn.com/us.svg" width="30" alt="Stados Unidos">USD</div>
-                                <div class="moedas flex">
-                                    <div class="dropdown-arrow"><img src="img/down.png" alt="abrir seleção de moedas"/></div>
-                                </div>
+                                <label>Para</label>
+                                <button class="btn-moeda flex" data-dropdown="para">
+                                    <img src="./img/usd.png" class="bandeira"></img>
+                                    <span class="codigo">BRL</span>
+                                    <span><img src="img/down.png" class="dropdown-arrow" alt="abrir seleção de moedas"/></span>
+                                </button>
+                                <ul class="menu-moedas escondido" data-menu="para">
+                                    <li data-moeda="BRL" data-bandeira="./img/brl.png">
+                                        <img src="./img/brl.png" class="bandeira" alt="Brasil">Real BRL</li>
+                                    <li data-moeda="USD" data-bandeira="./img/usd.png" class="selecionado">
+                                        <img src="./img/usd.png" class="bandeira" alt="Estados Unidos">Dólar Americano USD
+                                    </li>
+                                    <li data-moeda="USD" data-bandeira="./img/usd.png">
+                                        <img src="./img/eur.png" class="bandeira" alt="União Europeia">Euro EUR
+                                    </li>
+                                    <li data-moeda="USD" data-bandeira="./img/jpy.png">
+                                        <img src="./img/jpy.png" class="bandeira" alt="Japão">Iene Japonês JPY
+                                    </li>
+                                    <li data-moeda="USD" data-bandeira="./img/gbp.png">
+                                        <img src="./img/gbp.png" class="bandeira" alt="Reino Unido">Libra Esterlina GBP
+                                    </li>
+                                    <li data-moeda="USD" data-bandeira="./img/aud.png">
+                                        <img src="./img/aud.png" class="bandeira" alt="Austrália">Dólar Australiano AUD
+                                    </li>
+                                    <li data-moeda="USD" data-bandeira="./img/chf.png">
+                                        <img src="./img/chf.png" class="bandeira" alt="Suiça">Franco Suíço CHF
+                                    </li>
+                                    <li data-moeda="USD" data-bandeira="./img/cad.png">
+                                        <img src="./img/cad.png" class="bandeira" alt="Canadá">Dólar Canadense CAD
+                                    </li>
+                                    <li data-moeda="USD" data-bandeira="./img/cny.png">
+                                        <img src="./img/cny.png" class="bandeira" alt="China">Yuan Chinês CNY
+                                    </li>
+                                </ul>
                             </div>
                             <input type="text" class="input-converte" placeholder="0,00"/>
                         </div>
                     </div>
                 </div>
-                <button>Converter</button>
+                <button class="converter">Converter</button>
             </div>
         </section>
         <section class="glass flex">
@@ -86,7 +146,7 @@
             </div>
             <div class="card flex">
                 <div class="card-titulo flex">
-                    <img src="https://flagcdn.com/us.svg" width="30" alt="Stados Unidos"> <span>USD / BRL</span>
+                    <img src="https://flagcdn.com/eu.svg" width="30" alt="Stados Unidos"> <span>EUR / USD</span>
                 </div>
                 <div class="card-content flex">
                     <h3>0.52</h3>
@@ -95,7 +155,7 @@
             </div>
             <div class="card flex">
                 <div class="card-titulo flex">
-                    <img src="https://flagcdn.com/br.svg" width="30" alt="Brasil"> <span>BRL / EUR</span>
+                    <img src="https://flagcdn.com/br.svg" width="30" alt="Brasil"> <span>BRL / USD</span>
                 </div>
                 <div class="card-content flex">
                     <h3>0.92</h3>
@@ -105,4 +165,5 @@
         </section>
     </main>
 </body>
+<script src="./javascript/scripts.js"></script>
 </html>
