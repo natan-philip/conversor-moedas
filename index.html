@@ -27,11 +27,60 @@
                                 <div class="seletores-moedas flex">
                                     <label for="btnMoedaTop"></label>
                                     <button class="btn-moeda flex" id="btnMoedaTop" data-dropdown="de">
-                                        <img src="img/brl.png" class="bandeira"></img>
-                                        <span class="codigo">BRL</span>
-                                        <span><img src="img/down.png" class="dropdown-arrow" alt="abrir seleção de moedas"/></span>
+                                        <img src="img/usd.png" class="bandeira"></img>
+                                        <span class="codigo">USD</span>
+                                        <span><img src="img/down.png" class="dropdown-arrow" alt="abrir seleção de moedas"/></span>
                                     </button>
                                     <ul class="menu-moedas escondido" data-menu="de">
+                                        <li data-moeda="USD" data-bandeira="./img/usd.png" class="selecionado">
+                                            <img src="./img/usd.png" class="bandeira" alt="Estados Unidos">Dólar Americano USD
+                                        </li>
+                                        <li data-moeda="BRL" data-bandeira="./img/brl.png">
+                                            <img src="./img/brl.png" class="bandeira" alt="Brasil">Real BRL</li>
+                                        <li data-moeda="EUR" data-bandeira="./img/eur.png">
+                                            <img src="./img/eur.png" class="bandeira" alt="União Europeia">Euro EUR
+                                        </li>
+                                        <li data-moeda="JPY" data-bandeira="./img/jpy.png">
+                                            <img src="./img/jpy.png" class="bandeira" alt="Japão">Iene Japonês JPY
+                                        </li>
+                                        <li data-moeda="GBP" data-bandeira="./img/gbp.png">
+                                            <img src="./img/gbp.png" class="bandeira" alt="Reino Unido">Libra Esterlina GBP
+                                        </li>
+                                        <li data-moeda="AUD" data-bandeira="./img/aud.png">
+                                            <img src="./img/aud.png" class="bandeira" alt="Austrália">Dólar Australiano AUD
+                                        </li>
+                                        <li data-moeda="CHF" data-bandeira="./img/chf.png">
+                                            <img src="./img/chf.png" class="bandeira" alt="Suiça">Franco Suíço CHF
+                                        </li>
+                                        <li data-moeda="CAD" data-bandeira="./img/cad.png">
+                                            <img src="./img/cad.png" class="bandeira" alt="Canadá">Dólar Canadense CAD
+                                        </li>
+                                        <li data-moeda="CNY" data-bandeira="./img/cny.png">
+                                            <img src="./img/cny.png" class="bandeira" alt="China">Yuan Chinês CNY
+                                        </li>
+                                    </ul>
+                                </div>
+                                <label for="valorConverter"></label>
+                                <input type="text" class="input-converte" id="valorConverter" placeholder="US$ 1,00"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divisor flex">
+                        <div class="btn-inverter flex">
+                            <img src="./img/arrows.png" alt="botao inverter selecao de moedas">
+                        </div>
+                    </div>
+                    <div class="border">
+                        <div class="container-converte">
+                            <div class="converte-bottom flex">
+                                <div class="seletores-moedas flex">
+                                    <label for="btnMoedaBottom"></label>
+                                    <button class="btn-moeda flex" id="btnMoedaBottom" data-dropdown="para">
+                                        <img src="./img/brl.png" class="bandeira"></img>
+                                        <span class="codigo">BRL</span>
+                                        <span><img src="img/down.png" class="dropdown-arrow" alt="abrir seleção de moedas"/></span>
+                                    </button>
+                                    <ul class="menu-moedas escondido" data-menu="para">
                                         <li data-moeda="BRL" data-bandeira="./img/brl.png" class="selecionado">
                                             <img src="./img/brl.png" class="bandeira" alt="Brasil">Real BRL</li>
                                         <li data-moeda="USD" data-bandeira="./img/usd.png">
@@ -60,57 +109,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <label for="valorConverter"></label>
-                                <input type="text" class="input-converte" id="valorConverter" placeholder="1,00"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="divisor flex">
-                        <div class="btn-inverter flex">
-                            <img src="./img/arrows.png" alt="botao inverter selecao de moedas">
-                        </div>
-                    </div>
-                    <div class="border">
-                        <div class="container-converte">
-                            <div class="converte-bottom flex">
-                                <div class="seletores-moedas flex">
-                                    <label for="btnMoedaBottom"></label>
-                                    <button class="btn-moeda flex" id="btnMoedaBottom" data-dropdown="para">
-                                        <img src="./img/usd.png" class="bandeira"></img>
-                                        <span class="codigo">USD</span>
-                                        <span><img src="img/down.png" class="dropdown-arrow" alt="abrir seleção de moedas"/></span>
-                                    </button>
-                                    <ul class="menu-moedas escondido" data-menu="para">
-                                        <li data-moeda="BRL" data-bandeira="./img/brl.png">
-                                            <img src="./img/brl.png" class="bandeira" alt="Brasil">Real BRL</li>
-                                        <li data-moeda="USD" data-bandeira="./img/usd.png" class="selecionado">
-                                            <img src="./img/usd.png" class="bandeira" alt="Estados Unidos">Dólar Americano USD
-                                        </li>
-                                        <li data-moeda="EUR" data-bandeira="./img/eur.png">
-                                            <img src="./img/eur.png" class="bandeira" alt="União Europeia">Euro EUR
-                                        </li>
-                                        <li data-moeda="JPY" data-bandeira="./img/jpy.png">
-                                            <img src="./img/jpy.png" class="bandeira" alt="Japão">Iene Japonês JPY
-                                        </li>
-                                        <li data-moeda="GBP" data-bandeira="./img/gbp.png">
-                                            <img src="./img/gbp.png" class="bandeira" alt="Reino Unido">Libra Esterlina GBP
-                                        </li>
-                                        <li data-moeda="AUD" data-bandeira="./img/aud.png">
-                                            <img src="./img/aud.png" class="bandeira" alt="Austrália">Dólar Australiano AUD
-                                        </li>
-                                        <li data-moeda="CHF" data-bandeira="./img/chf.png">
-                                            <img src="./img/chf.png" class="bandeira" alt="Suiça">Franco Suíço CHF
-                                        </li>
-                                        <li data-moeda="CAD" data-bandeira="./img/cad.png">
-                                            <img src="./img/cad.png" class="bandeira" alt="Canadá">Dólar Canadense CAD
-                                        </li>
-                                        <li data-moeda="CNY" data-bandeira="./img/cny.png">
-                                            <img src="./img/cny.png" class="bandeira" alt="China">Yuan Chinês CNY
-                                        </li>
-                                    </ul>
-                                </div>
                                 <label for="valorConvertido"></label>
-                                <input type="text" id="valorConvertido" class="input-converte" placeholder="0,00"/>
+                                <input type="text" id="valorConvertido" class="input-converte" placeholder="R$ 0,00"/>
                             </div>
                         </div>
                     </div>
