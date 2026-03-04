@@ -57,6 +57,11 @@ menusMoedas.forEach(function (menu) {
             // Fecha o menu
             menu.classList.add('escondido');
 
+            // Se o menu "de" for alterado e tiver um valor no input, formata o valor
+            if (qualMenu === 'de' && inputValor.value) {
+                formatarInput();
+            }
+
             // Faz a conversao automaticamente
             converter();
         });
@@ -97,32 +102,51 @@ function pegarMoedaSelecionada(tipo) {
     return codigo;
 }
 
+// formatar o valor a ser convertido
+const inputValor = document.getElementById('valorConverter');
+
+function formatarInput() {
+    const moedaDe = pegarMoedaSelecionada('de');
+    const valorNumerico = parseFloat(inputValor.value.replace(/[^\d,]/g, '').replace(',', '.'));
+
+        if (!isNaN(valorNumerico) && valorNumerico > 0) {
+            inputValor.value = new Intl.NumberFormat(moedaDe, {
+                style: 'currency',
+                currency: moedaDe,
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+            }).format(valorNumerico);
+        }
+}
+    inputValor.addEventListener('blur', function () {
+        formatarInput();
+    });
+    
 // funcao converter moedas
 async function converter() {
 
-    const inputValor = document.getElementById('valorConverter');
     const inputResultado = document.getElementById('valorConvertido');
     const moedaDe = pegarMoedaSelecionada('de');
     const moedaPara = pegarMoedaSelecionada('para');
     // montando a url da api com as moedas selecionadas
     const URL = (API_URL + moedaDe + '-' + moedaPara);
-    
+
     // acessando o servidor da api
     try {
         const response = await fetch(URL);
         const data = await response.json();
-        
-        const cotacao = data[moedaDe + moedaPara].bid;
-        const valorConvertido = (inputValor.value * cotacao).toFixed(2);
-        
-        inputResultado.value = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: moedaPara }).format(valorConvertido);
 
+        const cotacao = data[moedaDe + moedaPara].bid;
+        const valorMoeda = parseFloat(inputValor.value.replace(/[^\d,]/g, '').replace(',', '.'));
+        const valorConvertido = (valorMoeda * cotacao).toFixed(2);
+
+        inputResultado.value = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: moedaPara }).format(valorConvertido);
     } catch (err) {
         alert("error ao acessar servidor");
     }
 }
 
-formulario.addEventListener('submit', function(e) {
+formulario.addEventListener('submit', function (e) {
     e.preventDefault();
     converter();
 });
