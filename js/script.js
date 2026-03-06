@@ -110,7 +110,7 @@ function formatarInput() {
     const valorNumerico = parseFloat(inputValor.value.replace(/[^\d,]/g, '').replace(',', '.'));
 
         if (!isNaN(valorNumerico) && valorNumerico > 0) {
-            inputValor.value = new Intl.NumberFormat(moedaDe, {
+            inputValor.value = new Intl.NumberFormat('pt-BR', {
                 style: 'currency',
                 currency: moedaDe,
                 minimumFractionDigits: 2,
@@ -118,9 +118,8 @@ function formatarInput() {
             }).format(valorNumerico);
         }
 }
-    inputValor.addEventListener('blur', function () {
-        formatarInput();
-    });
+
+inputValor.addEventListener('blur',formatarInput);
     
 // funcao converter moedas
 async function converter() {
